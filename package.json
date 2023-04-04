@@ -1,0 +1,21 @@
+{
+  "name": "dictionarybot",
+  "version": "1.0.0",
+  "description": "A Discord bot that uses the dictionaryapi.dev API to work as a dictionary",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Szyon",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.8.0",
+    "mongoose": "^7.0.3",
+    "node-fetch": "^3.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  },
+  "type": "module"
+}
