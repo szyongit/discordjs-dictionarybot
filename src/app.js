@@ -2,14 +2,12 @@ import { Client, GatewayIntentBits, REST, Routes, ActivityType, InteractionRespo
 import { config } from 'dotenv';
 
 import CommandHandler from '../handler/commandhandler.js'
-import DatabaseHandler from '../handler/databasehandler.js'
 
 config(); //dotenv
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const BOT_CLIENT_ID = process.env.BOT_CLIENT_ID;
 const GUILD_ID = process.env.GUILD_ID;
-const DATABASE_URI = process.env.DATABASE_URI;
 
 const client = new Client({
     intents: [
@@ -23,9 +21,6 @@ async function main() {
     const commands = CommandHandler.commands;
 
     try {
-        /*await DatabaseHandler.connectDB(DATABASE_URI);
-        console.log('Connected to database successfully!')*/
-
         //register commands
         console.log('Started refreshing application (/) commands.');
         await rest.put(Routes.applicationGuildCommands(BOT_CLIENT_ID, GUILD_ID), {
