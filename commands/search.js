@@ -208,6 +208,12 @@ const formInteraction = async (client, interaction) => {
         const term = sliced[0];
         let page = parseInt(sliced[1]);
 
+        if(!searchData[term]) {
+            await interaction.update({content:'Cannot change the embed anymore!'})
+            setTimeout(() => message.edit({content:null}), 3000);
+            return;
+        }
+
         if(interaction.customId == 'prev_page') {
             page -= 1;
         }

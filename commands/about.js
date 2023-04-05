@@ -48,9 +48,13 @@ const formInteraction = async (client, interaction) => {
         const components = new ActionRowBuilder()
         .addComponents(
             new ButtonBuilder()
-            .setLabel('GitHub')
+            .setLabel('Szyon on GitHub')
             .setStyle(ButtonStyle.Link)
-            .setURL('https://github.com/szyongit')
+            .setURL('https://github.com/szyongit'),
+            new ButtonBuilder()
+            .setLabel('View Code')
+            .setStyle(ButtonStyle.Link)
+            .setURL('https://github.com/szyongit/discordjs-dictionarybot')
         )
 
         interaction.reply({embeds:[embedBuilder.toJSON()], components:[components.toJSON()]});

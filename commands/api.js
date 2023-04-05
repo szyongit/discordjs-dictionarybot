@@ -36,6 +36,8 @@ const formInteraction = async (client, interaction) => {
 
             interaction.reply({embeds:[embedBuilder.toJSON()]});
         }
+
+        return;
     }
     
     interaction.reply({ content:'OOPS, something went wrong!' });
